@@ -1,0 +1,23 @@
+<html>
+<head>
+<title>Double Click Example</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body>
+<!-- https://stackoverflow.com/questions/4562012/make-a-link-open-on-double-click -->
+<script>
+jQuery(function($) {
+    $('#golink').click(function() {
+        return false;
+    }).dblclick(function() {
+        window.location = this.href;
+        return false;
+    });
+});
+</script>
+
+<a id='golink' href='https://archive.org'>Single-click does nothing. Double-click and you go to the "Internet Archive"</a>
+
+
+</body>
+</html>
